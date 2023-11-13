@@ -1,0 +1,26 @@
+//////////////// Sum of 'n' positive number /////////
+
+
+Console.Write("Enter a positive integer to find sum: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (n < 1)
+{
+    Console.WriteLine("Please enter a positive integer.");
+}
+else
+{
+    int result = Sum(n);
+    Console.WriteLine($"Sum of the first {n} natural numbers is: {result}");
+}
+
+static int Sum(int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n + Sum(n - 1); //use recrsive 
+    }
